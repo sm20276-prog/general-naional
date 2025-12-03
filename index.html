@@ -1,141 +1,109 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>كتالوج المتجر</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كتالوج الشركة</title>
 
-  <style>
+<style>
     body {
-      font-family: "Tahoma", Arial;
-      direction: rtl;
-      margin: 0;
-      padding: 0;
-      color: #222;
-      background: #f9f9f9;
+        font-family: "Tahoma", Arial;
+        direction: rtl;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+        color: #222;
     }
 
-    header {
-      background: #f8f8f8;
-      padding: 18px;
-      text-align: center;
-      border-bottom: 1px solid #eee;
+    .header {
+        background: #0056d2;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
     }
 
     .container {
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 0 12px;
-      background: #fff;
-      border-radius: 10px;
+        padding: 20px;
     }
 
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
+    .product-box {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        text-align: center;
     }
 
-    .card {
-      flex: 1 1 220px;
-      border: 1px solid #e6e6e6;
-      padding: 12px;
-      border-radius: 8px;
-      background: #fff;
-      transition: 0.3s;
+    .product-box img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 1px solid #ccc;
     }
 
-    .card:hover {
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 6px;
+    .btn-box {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
     }
 
     .btn {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 10px 14px;
-      border-radius: 6px;
-      text-decoration: none;
-      background: #1573ff;
-      color: #fff;
-      font-weight: bold;
-      transition: 0.3s;
-      border: none;
+        background: #007bff;
+        color: white;
+        padding: 12px 18px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 18px;
+        display: inline-block;
     }
 
     .btn:hover {
-      background: #0d52b3;
-      color: #fff;
+        background: #0056b3;
     }
 
-    footer {
-      padding: 14px;
-      text-align: center;
-      background: #fafafa;
-      border-top: 1px solid #eee;
-      margin-top: 24px;
+    h2 {
+        margin-top: 40px;
     }
 
-    @media(max-width:600px){
-      .grid{flex-direction:column}
+    .footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        color: #555;
     }
-  </style>
+</style>
 
 </head>
 <body>
 
-<header>
-  <h1>GENERAL NATIONAL</h1>
-  <p>موقع، رقم المبيعات، رقم الصيانة وكل صور الكتالوج في مكان واحد</p>
-</header>
+<div class="header">
+    موقع، رقم المبيعات، رقم الصيانة وكل صور الكتالوج في مكان واحد
+</div>
 
 <div class="container">
 
-  <section>
-    <h2>المنتجات</h2>
-    <div class="grid">
+    <!-- منتج 1 -->
+    <div class="product-box">
+        <h2>GENERAL NATIONAL 1</h2>
 
-      <div class="card">
-        <img src="catalog1.jpg" alt="منتج 1">
-        <h3>GENERAL NATIONAL 1</h3>
+        <!-- الصورة الجديدة -->
+        <img src="logo.jpg" alt="Product Image">
 
-        <a class="btn" href="tel:+96541000088">اتصل للمبيعات</a>
-        <a class="btn" href="https://wa.me/96541000088" target="_blank">واتساب</a>
-        <a class="btn" href="catalog.pdf" target="_blank">عرض ملف الـ PDF</a>
-      </div>
-
+        <!-- الأزرار -->
+        <div class="btn-box">
+            <a class="btn" href="tel:+96541000088">اتصل للمبيعات</a>
+            <a class="btn" href="https://wa.me/96541000088" target="_blank">واتساب</a>
+            <a class="btn" href="catalog.pdf" target="_blank">عرض الكتالوج</a>
+        </div>
     </div>
-  </section>
 
-  <section style="margin-top:20px;">
+    <!-- الصيانة والموقع -->
     <h2>الصيانة والموقع</h2>
     <p>رقم المبيعات: <a href="tel:+96541000088">+965 41000088</a></p>
-    <p>رقم الصيانة: <a href="tel:+96541011155">+965 41011155</a></p>
-  </section>
-
-  <section style="margin-top:20px;">
-    <h2>الموقع على الخريطة</h2>
-
-    <a class="btn" 
-       href="https://maps.app.goo.gl/tohJze4qrsgZUzz56?g_st=ipc" 
-       target="_blank">
-      عرض الموقع على الخريطة
-    </a>
-
-  </section>
-
-</div>
-
-<footer>
-  جميع الحقوق محفوظة © 2025
-</footer>
-
-</body>
-</html>
+    <p>رقم ا
