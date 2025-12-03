@@ -1,136 +1,63 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كتالوج الشركة</title>
+    <title>الخريطة</title>
 
-<style>
-    body {
-        font-family: "Tahoma", Arial;
-        direction: rtl;
-        margin: 0;
-        padding: 0;
-        background: #f9f9f9;
-        color: #222;
-    }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: #f5f5f5;
+        }
 
-    .header {
-        background: #0056d2;
-        padding: 20px;
-        text-align: center;
-        color: white;
-        font-size: 22px;
-        font-weight: bold;
-    }
+        .map-btn {
+            display: inline-block;
+            background: #0088ff;
+            color: #fff;
+            padding: 14px 25px;
+            border-radius: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
 
-    .container {
-        padding: 20px;
-    }
+        .map-container {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
 
-    .product-box {
-        background: white;
-        padding: 20px;
-        border-radius: 15px;
-        margin-bottom: 30px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-
-    .product-box img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 12px;
-        border: 1px solid #ccc;
-    }
-
-    .btn-box {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-
-    .btn {
-        background: #007bff;
-        color: white;
-        padding: 12px 18px;
-        border-radius: 10px;
-        text-decoration: none;
-        font-size: 18px;
-        display: inline-block;
-    }
-
-    .btn:hover {
-        background: #0056b3;
-    }
-
-    h2 {
-        margin-top: 40px;
-    }
-
-    .footer {
-        text-align: center;
-        padding: 20px;
-        margin-top: 40px;
-        color: #555;
-    }
-
-</style>
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
 
 </head>
 <body>
 
-<div class="header">
-    موقع، رقم المبيعات، رقم الصيانة وكل صور الكتالوج في مكان واحد
-</div>
+    <h2>موقعنا على الخريطة</h2>
 
-<div class="container">
+    <!-- زر الخريطة -->
+    <a class="map-btn" href="#map">اضغط لعرض الخريطة</a>
 
-    <!-- المنتج -->
-    <div class="product-box">
-        <h2>GENERAL NATIONAL 1</h2>
-
-        <!-- الصورة -->
-        <img src="logo.jpg" alt="Product Image">
-
-        <!-- أزرار المنتج -->
-        <div class="btn-box">
-            <a class="btn" href="tel:+96541000088">اتصل للمبيعات</a>
-            <a class="btn" href="https://wa.me/96541000088" target="_blank">واتساب</a>
-            <a class="btn" href="catalog.pdf" target="_blank">عرض الكتالوج</a>
-        </div>
+    <!-- الخريطة -->
+    <div id="map" class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d365.686312242072!2d47.93477413679071!3d29.311261614726547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf9be98ba1ac23%3A0xba91d22aa7aaf1bd!2z2LTYsdmD2Kkg2YXYrNmF2YjYudipINis2YbYsdin2YQg2KfZhNmI2LfZhtmK2Kkg2YTYqtis2KfYsdipINin2YTYrNmF2YTYqSDZiNin2YTYqtis2LLYptip!5e0!3m2!1sar!2skw!4v1764757835174!5m2!1sar!2skw"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </div>
-
-    <!-- أرقام التواصل -->
-    <h2>الصيانة والموقع</h2>
-
-    <p><strong>رقم المبيعات:</strong> 
-        <a href="tel:+96541000088">+965 41000088</a>
-    </p>
-
-    <p><strong>رقم الصيانة:</strong> 
-        <a href="tel:+96541011155">+965 41011155</a>
-    </p>
-
-    <!-- زر الخريطة الجديد -->
-    <h2>الموقع على الخريطة</h2>
-
-    <div class="btn-box">
-        <a class="btn" 
-           href="https://www.google.com/maps?q=29.31121855,47.93696803" 
-           target="_blank">
-           📍 عرض الموقع على الخريطة
-        </a>
-    </div>
-
-</div>
-
-<div class="footer">
-    © جميع الحقوق محفوظة — General National
-</div>
 
 </body>
 </html>
